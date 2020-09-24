@@ -10,7 +10,7 @@ test_dependencies = []
 
 
 setup(
-    name='pronym-machine-learning',
+    name='pronym_machine_learning',
     url='https://github.com/pronym-inc/pronym-machine-learning',
     author='Pronym',
     author_email='gregg@pronym.com',
