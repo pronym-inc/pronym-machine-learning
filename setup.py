@@ -1,6 +1,11 @@
 from setuptools import find_packages, setup
 
-install_dependencies = []
+install_dependencies = [
+    'mypy==0.782',
+    'numpy==1.19.2',
+    'pandas==1.1.2',
+    'scikit-learn==0.23.2'
+]
 test_dependencies = []
 
 
