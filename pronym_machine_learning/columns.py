@@ -61,7 +61,7 @@ class Column(Generic[DataT], ABC):
         return transformed_value
 
 
-class CategoricalColumn(Column):
+class CategoricalColumn(Generic[DataT], Column[DataT]):
     onehot_column_name_to_value: Dict[str, DataT]
 
     def __init__(self, name):
@@ -103,7 +103,7 @@ class CategoricalColumn(Column):
         return pd.DataFrame({self.name: untransformed_columns})
 
 
-class QuantitativeColumn(Column):
+class QuantitativeColumn(Generic[DataT], Column[DataT]):
     blank: int
     normalization_divisor: Optional[float]
     normalization_constant: Optional[float]
